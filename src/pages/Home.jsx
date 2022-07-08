@@ -15,11 +15,11 @@ const Home = () => {
       <div className="flex flex-col items-center justify-center w-3/5">
         <div className="flex justify-items-start flex-col">
           <h1 className="text-3xl md:text-5xl text-center font-bold">
-            ❆AuctoMatic
+            ❆AuctoMate
           </h1>
           <p className="justify-self-start text-base mt-3 text-center md:text-left font-medium">
             Redefining digital bidding & revising e-Auction culture with
-            AuctoMatic. A marketplace to bid upon and sell your assets. With
+            AuctoMate. A marketplace to bid upon and sell your assets. With
             exclusive swift assistance of prime optimsation for assets having
             highly volatile market values.
           </p>

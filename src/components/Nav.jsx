@@ -5,7 +5,7 @@ const Nav = () => {
     <nav className="flex bg-slate-800 justify-between p-4">
       <Link to="/">
         <h1 className="text-xl text-white cursor-pointer font-bold">
-          ❆AuctoMatic
+          ❆AuctoMate
         </h1>
       </Link>
       <div className="flex mr-4 gap-4 items-center">
