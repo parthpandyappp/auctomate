@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { MdAddToPhotos } from "react-icons/md";
 const Nav = () => {
   return (
     <nav className="flex bg-slate-800 justify-between p-4">
@@ -7,7 +8,11 @@ const Nav = () => {
           ❆AuctoMatic
         </h1>
       </Link>
-      <div className="flex mr-4 gap-4"></div>
+      <div className="flex mr-4 gap-4 items-center">
+        <Link to="registration/asset">
+          <MdAddToPhotos className="text-white text-2xl" />
+        </Link>
+      </div>
     </nav>
   );
 };

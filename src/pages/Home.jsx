@@ -28,7 +28,7 @@ const Home = () => {
             Easy auctions, there you go!
           </p>
 
-          <div className="flex flex-col md:flex-row justify-center mt-14 gap-3">
+          <div className="flex flex-col md:flex-row justify-center mt-14 gap-3 items-center">
             <Link to="/listing/biddings/">
               <button className="bg-slate-800 text-white px-6 py-3 rounded font-medium">
                 Get Started
