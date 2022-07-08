@@ -1,1 +1,1 @@
-# virtual-auction-architecture
+# AuctoMatic
