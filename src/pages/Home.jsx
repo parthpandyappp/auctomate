@@ -1,4 +1,5 @@
 import landing from "../assets/landing.png";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -28,9 +29,11 @@ const Home = () => {
           </p>
 
           <div className="flex flex-col md:flex-row justify-center mt-14 gap-3">
-            <button className="bg-slate-800 text-white px-6 py-3 rounded font-medium">
-              Get Started
-            </button>
+            <Link to="/listing/biddings/">
+              <button className="bg-slate-800 text-white px-6 py-3 rounded font-medium">
+                Get Started
+              </button>
+            </Link>
             <button className="border border-slate-800 px-6 py-2 rounded flex items-center justify-center font-semibold">
               <img
                 src="https://img.icons8.com/ios-glyphs/30/000000/github.png"
