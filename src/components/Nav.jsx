@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { MdAddToPhotos } from "react-icons/md";
 const Nav = () => {
   return (
-    <nav className="flex bg-slate-800 justify-between p-4">
+    <nav className="flex bg-slate-800 justify-between items-center p-4">
       <Link to="/">
         <h1 className="text-xl text-white cursor-pointer font-bold">
           ❆AuctoMate
@@ -12,6 +12,7 @@ const Nav = () => {
         <Link to="registration/asset">
           <MdAddToPhotos className="text-white text-2xl" />
         </Link>
+        <button className="border text-white rounded px-6 py-2">Login</button>
       </div>
     </nav>
   );
