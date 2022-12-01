@@ -11,7 +11,7 @@ const BidCard = ({ data }) => {
           alt=""
         />
       </a>
-      <div class="p-5 border h-64 w-80">
+      <div class="p-5 border border-t-0 h-64 w-80">
         <a href="#" class="mb-3">
           <h5 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             {title}

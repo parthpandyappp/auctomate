@@ -65,6 +65,19 @@ const bids = [
         start_date: "",
         end_date: "",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ab vitae qui tempore illum ducimus ut et mollitia recusandae quibusdam asperiores, impedit aliquid repellat nostrum maiores quos? Iusto, nam architecto!",
+    },
+    {
+        reg_ref: uuid(),
+        title: "Peter Kabuki's chair",
+        base_price: 589,
+        bid_type: "Minimum Bid Auction",
+        is_using_ai: false,
+        category: "",
+        other_category: "",
+        upload_file: require("./bid-assets/peterchair.jpeg"),
+        start_date: "",
+        end_date: "",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ab vitae qui tempore illum ducimus ut et mollitia recusandae quibusdam asperiores, impedit aliquid repellat nostrum maiores quos? Iusto, nam architecto!",
     }
 ]
 
