@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="bg-slate-800 text-white p-3 text-center font-bold">
+    <footer className="flex-none bg-slate-800 text-white p-1 text-center font-bold">
       &copy; 2022 AuctoMate
     </footer>
   );

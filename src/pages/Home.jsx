@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <main className="flex flex-col md:flex-row justify-center items-center w-full h-screen">
+    <main className="flex flex-col md:flex-row justify-center items-center w-full grow">
       <div className="flex justify-center w-1/2">
         <img
           src={landing}
