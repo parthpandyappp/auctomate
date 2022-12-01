@@ -16,12 +16,12 @@ const Signup = () => {
   const [credentials, setCredentials] = useState(initialVals);
 
   return (
-    <div className="mx-auto my-5 w-1/2  p-4 bg-white border border-gray-200 rounded-lg shadow-md sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700 grow">
+    <div className="mx-auto my-5 md:w-1/2 w-full p-4 bg-white border border-gray-200 rounded-lg md:shadow-md sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700 grow">
       <form className="space-y-6  text-center" action="#">
         <h5 className="text-xl font-bold text-gray-900 dark:text-white">
           AuctoMate | Signup
         </h5>
-        <div className="flex justify-around gap-2">
+        <div className="flex md:flex-row flex-col justify-around gap-2">
           <div>
             <label
               for="fname"
@@ -79,7 +79,7 @@ const Signup = () => {
               type="email"
               name="email"
               id="email"
-              className="tracking-widest bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+              className="tracking-widest bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white w-full"
               placeholder="name@company.com"
               value={credentials.email}
               onChange={(e) =>
@@ -93,13 +93,13 @@ const Signup = () => {
           </div>
         </div>
 
-        <div className="flex gap-2">
-          <div className="w-1/2">
+        <div className="flex md:flex-row flex-col gap-2">
+          <div className="md:w-1/2 w-full">
             <label
               for="password"
               className="block mb-2 text-sm font-medium text-gray-900 dark:text-white text-left"
             >
-              Confirm password
+              Create password
             </label>
             <input
               type="password"
@@ -117,7 +117,7 @@ const Signup = () => {
               required
             />
           </div>
-          <div className="w-1/2">
+          <div className="md:w-1/2 w-full">
             <label
               for="password"
               className="block mb-2 text-sm font-medium text-gray-900 dark:text-white text-left"
@@ -142,8 +142,8 @@ const Signup = () => {
           </div>
         </div>
 
-        <div className="flex gap-2">
-          <div className="w-1/2">
+        <div className="flex md:flex-row flex-col gap-2">
+          <div className="md:w-1/2 w-full">
             <label
               for="password"
               className="block mb-2 text-sm font-medium text-gray-900 dark:text-white text-left"
@@ -167,7 +167,7 @@ const Signup = () => {
               required
             />
           </div>
-          <div className="w-2/3">
+          <div className="md:w-2/3 w-full">
             <label
               for="passport_pic"
               className="block mb-2 text-sm font-medium text-gray-900 dark:text-white text-left"

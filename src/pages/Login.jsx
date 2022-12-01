@@ -6,7 +6,7 @@ const Login = () => {
   const [credentials, setCredentials] = useState(initialVals);
 
   return (
-    <div className="mx-auto my-5 w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow-md sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700 grow">
+    <div className="mx-auto my-5 w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg md:shadow-md sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700 grow">
       <form className="space-y-6  text-center" action="#">
         <h5 className="text-xl font-bold text-gray-900 dark:text-white">
           AuctoMate | Signin
