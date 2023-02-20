@@ -12,7 +12,9 @@ const Nav = () => {
         <Link to="registration/asset">
           <MdAddToPhotos className="text-white text-2xl" />
         </Link>
-        <button className="border text-white rounded px-6 py-2">Login</button>
+        <Link to="/auth/login">
+          <button className="border text-white rounded px-6 py-2">Login</button>
+        </Link>
       </div>
     </nav>
   );
