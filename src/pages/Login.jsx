@@ -1,13 +1,50 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-
+import { Link, Navigate } from "react-router-dom";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../firebase";
+import { useSetRecoilState } from "recoil";
+import { userState } from "../states";
+import { useNavigate } from "react-router-dom";
+import {
+  notifyUserLogin,
+  notifyUserLoginError,
+  notifyError,
+} from "../helper-functions";
 const Login = () => {
   const initialVals = { email: "", password: "", rememberme: false };
   const [credentials, setCredentials] = useState(initialVals);
+  const setAuthUser = useSetRecoilState(userState);
+  const navigate = useNavigate();
+
+  const validateLogin = async (event) => {
+    event.preventDefault();
+    try {
+      const userRef = collection(db, "users");
+      const querySnapshot = await getDocs(userRef);
+      const collabList = querySnapshot.docs.map((snap) => snap.data());
+      const isCorrect = collabList.some(
+        (user) =>
+          user.email === credentials["email"] &&
+          user.password === credentials["password"]
+      );
+      const authUser = collabList.find(
+        (user) =>
+          user.email === credentials["email"] &&
+          user.password === credentials["password"]
+      );
+      setAuthUser(authUser);
+      notifyUserLogin(authUser.fname);
+      navigate("/");
+      console.log("LOGIN SUCCESSFUL", isCorrect);
+    } catch (error) {
+      console.log(error);
+      notifyError();
+    }
+  };
 
   return (
     <div className="mx-auto my-5 w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg md:shadow-md sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700 grow">
-      <form className="space-y-6  text-center" action="#">
+      <form className="space-y-6  text-center" onSubmit={validateLogin}>
         <h5 className="text-xl font-bold text-gray-900 dark:text-white">
           AuctoMate | Signin
         </h5>

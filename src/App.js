@@ -1,5 +1,6 @@
 import { Routes } from "./routes"
 import { Nav, Footer } from "./components"
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       <Nav />
       <Routes />
       <Footer />
+      <Toaster />
     </div>
   )
 }
