@@ -1,6 +1,13 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import { Home, AssetRegForm, BiddingList, Login, Signup } from "../pages";
+import {
+  Home,
+  AssetRegForm,
+  BiddingList,
+  Login,
+  Signup,
+  LearnMoreAboutBid,
+} from "../pages";
 
 const EndPoints = () => {
   return (
@@ -10,6 +17,7 @@ const EndPoints = () => {
       <Route path="/listing/biddings" element={<BiddingList />} />
       <Route path="/auth/login" element={<Login />} />
       <Route path="/auth/signup" element={<Signup />} />
+      <Route path="/learn-more" element={<LearnMoreAboutBid />} />
     </Routes>
   );
 };

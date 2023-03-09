@@ -39,7 +39,7 @@ const Home = () => {
                 src="https://img.icons8.com/ios-glyphs/30/000000/github.png"
                 alt="github"
               />
-              GitHub
+              <a href="https://github.com/parthpandyappp/auctomate/">GitHub</a>
             </button>
           </div>
         </div>

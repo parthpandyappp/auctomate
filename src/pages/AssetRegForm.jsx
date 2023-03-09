@@ -1,4 +1,4 @@
-import uuid from "react-uuid";
+import { v4 as uuidv4 } from "uuid";
 import React, { useState } from "react";
 import { bids } from "../states";
 import { useRecoilState } from "recoil";
@@ -6,10 +6,13 @@ import axios from "axios";
 import { sampleData } from "../assets/data/sampledata";
 import { MdClose } from "react-icons/md";
 import _ from "lodash";
+import { doc, setDoc, collection } from "firebase/firestore";
+import { db } from "../firebase";
+import { notifyAssetReg } from "../helper-functions";
 
 const AssetRegForm = () => {
   const initData = {
-    _id: uuid(),
+    _id: uuidv4(),
     title: "",
     is_using_ai: false,
     category: "real_esatae",
@@ -117,6 +120,20 @@ const AssetRegForm = () => {
       const uniqueObj = _.uniqWith(bidData.reverse(), (arrVal, othVal) => {
         return _.isEqual(_.pick(arrVal, ["_id"]), _.pick(othVal, ["_id"]));
       });
+      (async () => {
+        try {
+          const bidRef = collection(db, "bids");
+          await setDoc(doc(bidRef, formData["_id"]), {
+            ...formData,
+            payload,
+            upload_file: "",
+            payload: "",
+          });
+        } catch (error) {
+          console.log(error);
+        }
+      })();
+
       setBidsData(uniqueObj);
       setShowModal(false);
     } else {
@@ -128,6 +145,7 @@ const AssetRegForm = () => {
     }
 
     setFormData(initData);
+    notifyAssetReg();
   };
 
   console.log(formData);
